@@ -18,3 +18,10 @@ END$$
 DELIMITER ;
 ;
 
+
+-- apply changes 
+
+--- then call procedure
+
+call new_procedure(10);
+
