@@ -1,0 +1,8 @@
+-- json data
+SELECT * FROM testing.emp;
+insert into testing.emp(emp_id, emp_details) values (1,'{"firstname":"Nitika", "lastname":"Rawat", "phone":9717740338,"age":25}');
+select concat(emp_details->>'$.firstname',' ', emp_details->>'$.lastname') as fullname from testing.emp;
+-- xml 
+ALTER TABLE `testing`.`emp` ADD COLUMN `xmldata` TEXT ;
+insert into testing.emp(emp_id, emp_details, xmldata) values (2,'{"firstname":"Riya", "lastname":"Tripathi", "phone":97177403238,"age":24}', '<Employee><City>Delhi</City><Country>India</Country></Employee>');
+
