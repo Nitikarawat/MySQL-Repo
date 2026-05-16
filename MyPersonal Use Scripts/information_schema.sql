@@ -15,7 +15,11 @@ select * from  information_schema.TABLE_CONSTRAINTS ;
 -- get data about table rows, data size and index size -- total size is data+index length 
 -- get fregmentation in tables -- use data_length & index length
 select * from  information_schema.TABLES ;
+select * from  information_schema.COLUMNS ;
 
 -- both statements are equivalent
 select * from  information_schema.STATISTICS ;
 SHOW INDEX FROM sql_hr.employees;
+
+-- -- INNODB_BUFFER_POOL_STATS
+select * from information_schema.INNODB_BUFFER_POOL_STATS;
